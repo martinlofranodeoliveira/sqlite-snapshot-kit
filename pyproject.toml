@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sqlite-snapshot-kit"
+version = "0.1.0"
+description = "Consistent SQLite snapshots with integrity checks and no-overwrite publication"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Martin Lofrano de Oliveira"}]
+dependencies = []
+keywords = ["sqlite", "backup", "snapshot", "integrity"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Database",
+]
+
+[project.scripts]
+sqlite-snapshot-kit = "sqlite_snapshot_kit.cli:main"
+
+[project.urls]
+Repository = "https://github.com/martinlofranodeoliveira/sqlite-snapshot-kit"
+Issues = "https://github.com/martinlofranodeoliveira/sqlite-snapshot-kit/issues"
+
+[tool.setuptools.packages.find]
+include = ["sqlite_snapshot_kit*"]
